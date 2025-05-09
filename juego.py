@@ -22,8 +22,14 @@ Jugador1 = []
 
 carta = random.choice(list(mazo.keys()))
 Jugador1.append(carta)
-print(Jugador1)
+print(f"Jugador1 {Jugador1}")
 
+mazo[carta] -= 1
+
+Computadora = []
+carta = random.choice(list(mazo.keys()))
+Computadora.append(carta)
+print(f"computadora {Computadora}")
 
 mazo[carta] -= 1
 
