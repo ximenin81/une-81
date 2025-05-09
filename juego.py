@@ -1,6 +1,6 @@
 #UNE
-
-mano = {
+import random
+mazo = {
     '0' :4,
     '1' : 4,
     '2' : 4,
@@ -16,6 +16,15 @@ mano = {
     'reversa' : 4,
     'comodin' : 3,
 }
-Jugador1 = {}
-Jugador1.add(random.choice([mano]))
+print(mazo)
+
+Jugador1 = []
+
+carta = random.choice(list(mazo.keys()))
+Jugador1.append(carta)
 print(Jugador1)
+
+
+mazo[carta] -= 1
+
+print(mazo)
