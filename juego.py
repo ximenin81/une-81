@@ -34,3 +34,15 @@ print(f"computadora {Computadora}")
 mazo[carta] -= 1
 
 print(mazo)
+
+if Jugador1[0] == '+2':
+    carta = random.choice(list(mazo.keys()))
+    Computadora.append(carta)
+    mazo[carta] -= 1
+
+    carta = random.choice(list(mazo.keys()))
+    Computadora.append(carta)
+    mazo[carta] -= 1
+
+    print(mazo)
+    print(f"Computadora {Computadora}")
