@@ -2,6 +2,11 @@
 import random
 
 def darCartas(cantidad, mazo, usuario):
+    """
+    El dar cartas sirve para cuando un jugador pone una carta 
+    con funcion de dar ccartas al otro se le agrguega al jugador 
+    las cartas debidas y eliminnar del maso
+    """
     contador=0
     while contador < cantidad:
         carta = random.choice  (list(mazo.keys()))
@@ -28,21 +33,55 @@ mazo = {
 print(mazo)
 
 Jugador1 = []
-
-carta = random.choice(list(mazo.keys()))
-Jugador1.append(carta)
-print(f"Jugador1 {Jugador1}")
-
-mazo[carta] -= 1
-
 Computadora = []
-carta = random.choice(list(mazo.keys()))
-Computadora.append(carta)
-print(f"computadora {Computadora}")
 
-mazo[carta] -= 1
 
-print(mazo)
+#Repartir cartas
+darCartas(7, mazo, Jugador1)
+darCartas(7, mazo, Computadora)
+
+
+print(Jugador1)
+juego1=input("tire una carta ")
+
+print(Computadora)
+juego2=input("tire una carta ")
+
+print(Jugador1)
+juego1=input("tire una carta ")
+
+print(Computadora)
+juego2=input("tire una carta ")
+
+print(Jugador1)
+juego1=input("tire una carta ")
+
+print(Computadora)
+juego2=input("tire una carta ")
+
+print(Jugador1)
+juego1=input("tire una carta ")
+
+print(Computadora)
+juego2=input("tire una carta ")
+
+print(Jugador1)
+juego1=input("tire una carta ")
+
+print(Computadora)
+juego2=input("tire una carta ")
+
+print(Jugador1)
+juego1=input("tire una carta ")
+
+print(Computadora)
+juego2=input("tire una carta ")
+
+print(Jugador1)
+juego1=input("tire una carta ")
+
+print(Computadora)
+juego2=input("tire una carta ")
 
 if Jugador1[0] == '+2':
     darCartas(2, mazo, Computadora)
@@ -50,16 +89,15 @@ if Jugador1[0] == '+2':
     print(f"Computadora {Computadora}")
 
 if Jugador1[0]=='+4':
-    darCartas(4, mazo, Computadora)
     print(mazo)
     print(f"Computadora {Computadora}")
 
-    if Computadora[0] == '+2':
+if Computadora[0] == '+2':
     darCartas(2, mazo, Jugador1)
     print(mazo)
     print(f"jugador1 {Jugador1}")
 
-   if Computadora[0] == '+4':
+if Computadora[0] == '+4':
     darCartas(2, mazo, Jugador1)
     print(mazo)
     print(f"jugador1 {Jugador1}")
