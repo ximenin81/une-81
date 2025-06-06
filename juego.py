@@ -14,6 +14,14 @@ def darCartas(cantidad, mazo, usuario):
         mazo[carta] -= 1
         contador +=1
 
+def jugarCartas( carta, mazoUsuario):
+    """
+    El dar cartas sirve para cuando un jugador pone una carta 
+    con funcion de dar ccartas al otro se le agrguega al jugador 
+    las cartas debidas y eliminnar del maso
+    """
+    mazoUsuario.remove(carta)
+
 mazo = {
     '0' :4,
     '1' : 4,
@@ -40,67 +48,38 @@ Computadora = []
 darCartas(7, mazo, Jugador1)
 darCartas(7, mazo, Computadora)
 
+while True:
+    print(f"Cartas del Jugador 1 {Jugador1} : ")
+    juego1=input("Jugador 1 tire una carta o saque del mazo : ")
+    if juego1 == "mazo":
+        darCartas(1,mazo,Jugador1)
+    else:
+        jugarCartas(juego1,Jugador1)
+    if juego1=='+4':
+    #     print(mazo)
+        darCartas(4,mazo,Computadora)
+    
+    print(f"Cartas de la Computadora {Computadora} : ")
+    juego2=input("Jugador 2 tire una carta ")
+    jugarCartas(juego2,Computadora)
 
-print(Jugador1)
-juego1=input("tire una carta ")
 
-print(Computadora)
-juego2=input("tire una carta ")
+    # if Jugador1[0] == '+2':
+    #     darCartas(2, mazo, Computadora)
+    #     print(mazo)
+    #     print(f"Computadora {Computadora}")
 
-print(Jugador1)
-juego1=input("tire una carta ")
+   
 
-print(Computadora)
-juego2=input("tire una carta ")
+    # if Computadora[0] == '+2':
+    #     darCartas(2, mazo, Jugador1)
+    #     print(mazo)
+    #     print(f"jugador1 {Jugador1}")
 
-print(Jugador1)
-juego1=input("tire una carta ")
-
-print(Computadora)
-juego2=input("tire una carta ")
-
-print(Jugador1)
-juego1=input("tire una carta ")
-
-print(Computadora)
-juego2=input("tire una carta ")
-
-print(Jugador1)
-juego1=input("tire una carta ")
-
-print(Computadora)
-juego2=input("tire una carta ")
-
-print(Jugador1)
-juego1=input("tire una carta ")
-
-print(Computadora)
-juego2=input("tire una carta ")
-
-print(Jugador1)
-juego1=input("tire una carta ")
-
-print(Computadora)
-juego2=input("tire una carta ")
-
-if Jugador1[0] == '+2':
-    darCartas(2, mazo, Computadora)
-    print(mazo)
-    print(f"Computadora {Computadora}")
-
-if Jugador1[0]=='+4':
-    print(mazo)
-    print(f"Computadora {Computadora}")
-
-if Computadora[0] == '+2':
-    darCartas(2, mazo, Jugador1)
-    print(mazo)
-    print(f"jugador1 {Jugador1}")
-
-if Computadora[0] == '+4':
-    darCartas(2, mazo, Jugador1)
-    print(mazo)
-    print(f"jugador1 {Jugador1}")
+    # if Computadora[0] == '+4':
+    # darCartas(2, mazo, Jugador1)
+    # print(mazo)
+    # print(f"jugador1 {Jugador1}")
 
 
 
