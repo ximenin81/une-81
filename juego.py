@@ -51,6 +51,9 @@ darCartas(7, mazo, Computadora)
 while True:
     print(f"Cartas del Jugador 1 {Jugador1} : ")
     juego1=input("Jugador 1 tire una carta o saque del mazo : ")
+    juego2=random.choice(Computadora)
+    print(f"Computadora jugo {juego2}")
+   
     if juego1 == "mazo":
         darCartas(1,mazo,Jugador1)
     else:
@@ -72,7 +75,6 @@ while True:
         darCartas(4,mazo,Jugador1)
 
     print(f"Cartas de la Computadora1 {Computadora} : ")
-    juego2=input("Jugador 2 tire una carta ")
     jugarCartas(juego2,Computadora)
 
 
