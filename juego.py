@@ -59,12 +59,24 @@ while True:
     #     print(mazo)
         darCartas(4,mazo,Computadora)
     
-    print(f"Cartas de la Computadora {Computadora} : ")
+    if juego1=='+2':
+    #     print(mazo)
+        darCartas(2,mazo,Computadora)
+
+    if juego2=='+2':
+    #     print(mazo)
+        darCartas(2,mazo,Jugador1)
+
+    if juego2=='+4':
+    #     print(mazo)
+        darCartas(4,mazo,Jugador1)
+
+    print(f"Cartas de la Computadora1 {Computadora} : ")
     juego2=input("Jugador 2 tire una carta ")
     jugarCartas(juego2,Computadora)
 
 
-    # if Jugador1[0] == '+2':
+   
     #     darCartas(2, mazo, Computadora)
     #     print(mazo)
     #     print(f"Computadora {Computadora}")
